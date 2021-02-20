@@ -23,7 +23,8 @@ Please report issues for things or places that I might have missed
 - Rename the file to `adminer.css` and place it beside the `adminer.php` file.
 
 **Docker**
-These instructions have been tested with this particular docker image[docker-adminer](https://hub.docker.com/_/adminer/)
+
+These instructions have been tested with this particular docker image [docker-adminer](https://hub.docker.com/_/adminer/)
 
 - copy the a themed css and rename it to `adminer.css` and place it in you directory
 - in your dockerfile, add the following line
