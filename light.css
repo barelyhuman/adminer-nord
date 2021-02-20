@@ -139,6 +139,7 @@ p + table,
 h3 + table {
   border: 1px solid var(--dark);
   margin-bottom: 40px;
+  -webkit-box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
 }
 
@@ -153,6 +154,12 @@ table.checkable tbody tr:hover th {
 }
 
 .js .checkable .checked td:first-child {
+  background: -o-linear-gradient(
+    left,
+    #5df1dc 2px,
+    var(--dark) 2px,
+    var(--dark) 100%
+  );
   background: linear-gradient(
     to right,
     #5df1dc 2px,
@@ -268,6 +275,7 @@ p code + a:visited:hover {
   bottom: 0;
   position: fixed;
   padding: 0 30px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -300,6 +308,7 @@ p code + a:visited:hover {
 #menu #dbs {
   padding: 0 10px 15px;
   border-bottom: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: transparent;
 }
@@ -320,6 +329,7 @@ p code + a:visited:hover {
   text-align: center;
   display: table;
   width: 100%;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-bottom: 1px solid var(--dark);
 }
@@ -518,6 +528,7 @@ p code + a:visited:hover {
 }
 
 select {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   border: 0;
@@ -532,6 +543,8 @@ select {
   display: inline-block;
   width: auto;
   vertical-align: middle;
+  -webkit-transition: background 0.24s;
+  -o-transition: background 0.24s;
   transition: background 0.24s;
 }
 
@@ -552,11 +565,14 @@ textarea {
   border: 0;
   padding: 12px 16px;
   margin: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 16px;
   color: var(--foreground);
   background: var(--inputs-default);
   border-radius: 2px;
+  -webkit-transition: background 0.24s;
+  -o-transition: background 0.24s;
   transition: background 0.24s;
   vertical-align: middle;
 }
@@ -598,17 +614,21 @@ input[type='button'] {
   color: #0d3a33;
   font-weight: bold;
   margin-bottom: 5px;
+  -webkit-transition: background 0.4s ease;
+  -o-transition: background 0.4s ease;
   transition: background 0.4s ease;
   font-size: 12px;
   border-radius: 2px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   line-height: 42px;
+  -webkit-box-shadow: 0 3px 20px 0 rgba(93, 241, 220, 0.06);
   box-shadow: 0 3px 20px 0 rgba(93, 241, 220, 0.06);
 }
 
 input[type='submit']:hover,
 input[type='button']:hover {
+  -webkit-box-shadow: 0 3px 25px 1px rgba(93, 241, 220, 0.12);
   box-shadow: 0 3px 25px 1px rgba(93, 241, 220, 0.12);
 }
 
@@ -619,6 +639,7 @@ input[type='button'][disabled]:hover {
   background: rgba(0, 0, 0, 0.13) !important;
   color: rgba(255, 255, 255, 0.2);
   cursor: not-allowed;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -632,11 +653,13 @@ input[type='button']:focus {
 .logout input[type='submit'] {
   color: var(--foreground);
   background: transparent;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
 .logout input[type='submit']:hover {
   color: #5df1dc;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -651,6 +674,8 @@ input[type='radio'] {
   cursor: pointer;
   position: relative;
   margin: 3px 6px;
+  -webkit-transition: border-color 0.24s;
+  -o-transition: border-color 0.24s;
   transition: border-color 0.24s;
 }
 
@@ -678,21 +703,30 @@ input[type='radio']:checked::before {
   top: 0;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   color: #0d3a33;
   font-size: 13px;
 }
 
-/*
-   input.default,
-   input.default {
-       box-shadow: none;
-       background: #2e84e4;
-       color: var(--foreground);
-       font-weight: bold;
-   }*/
+input[type='search'] {
+  -webkit-appearance: textfield;
+}
+
+/* input.default,
+ input.default {
+     box-shadow: none;
+     background: #2e84e4;
+     color: var(--foreground);
+     font-weight: bold;
+ } */
 
 .icon {
   border-radius: 2px;
@@ -703,6 +737,7 @@ input[type='radio']:checked::before {
   background-color: var(--dark);
   border: 0;
   border-radius: 2px;
+  -webkit-box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -712,11 +747,17 @@ label {
 }
 
 label.block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 
 *[align='right'] > label.block {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
   justify-content: flex-end;
 }
 
@@ -730,6 +771,7 @@ label.block {
 .error {
   color: var(--foreground);
   background: #e44747;
+  -webkit-box-shadow: 0 10px 30px rgba(228, 71, 71, 0.1);
   box-shadow: 0 10px 30px rgba(228, 71, 71, 0.1);
 }
 
@@ -749,7 +791,11 @@ form p input {
 }
 
 form p label {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   color: var(--foreground);
   margin: 0 8px;
@@ -766,6 +812,7 @@ form p label {
 
 #schema .table {
   padding: 6px;
+  -webkit-box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.1);
   border: 1px solid var(--dark);
 }
@@ -841,6 +888,7 @@ form p label {
   outline: 0;
   width: 80px;
   text-align: right;
+  -moz-text-align-last: right;
   text-align-last: right;
 }
 
@@ -869,11 +917,14 @@ form p label {
   border: 0 !important;
   padding: 12px 16px !important;
   margin: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 16px;
   color: var(--foreground);
   background: rgba(255, 255, 255, 0.03);
   border-radius: 2px;
+  -webkit-transition: background 0.24s;
+  -o-transition: background 0.24s;
   transition: background 0.24s;
   outline: 0 !important;
 }
@@ -967,8 +1018,15 @@ form p label {
 }
 
 #help.jush-pgsql ~ #menu #tables li:not(.hidden) {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
   display: flex !important;
+  -webkit-box-orient: horizontal !important;
+  -webkit-box-direction: reverse !important;
+  -ms-flex-direction: row-reverse !important;
   flex-direction: row-reverse !important;
+  -webkit-box-pack: justify !important;
+  -ms-flex-pack: justify !important;
   justify-content: space-between !important;
 }
 
