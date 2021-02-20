@@ -7,6 +7,7 @@
   --forground-accent: #d8dee9;
   --inputs-default: rgba(255, 255, 255, 0.05);
   --inputs-focus: rgba(255, 255, 255, 0.07);
+  --inputs-border: rgba(255, 255, 255, 0.08);
   --menu-link: #e5e9f0;
   --menu-link-hover: #d8dee9;
 }
@@ -668,7 +669,7 @@ input[type='radio'] {
   width: 18px;
   height: 18px;
   background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.08);
+  border: 2px solid var(--inputs-border);
   border-radius: 2px;
   -webkit-appearance: none;
   cursor: pointer;
